@@ -10,4 +10,8 @@ basic.clearScreen()
 pins.digitalWritePin(DigitalPin.P16,0)
 basic.showIcon(IconNames.Happy)
 
-basic.showString('Hello, World!')
+// turn on LED
+input.onButtonPressed(Button.A, function () {
+  basic.showIcon(IconNames.Yes)
+  pins.digitalWritePin(DigitalPin.P16, 1)
+})
