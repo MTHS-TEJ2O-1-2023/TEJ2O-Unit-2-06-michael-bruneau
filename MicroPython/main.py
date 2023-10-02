@@ -9,15 +9,13 @@ from microbit import *
 # setup
 display.clear()
 pin16.write_digital(0)
-display.show(Image.Happy)
+display.show(Image.HAPPY)
 
-# turn on LED
 while True:
     if button_a.is_pressed():
         pin16.write_digital(1)
-        display.show(Image.Yes)
+        display.show(Image.YES)
 
-while True:
-    if button_a.is_pressed():
+    if button_b.is_pressed():
         pin16.write_digital(0)
-        display.show(Image.No)
+        display.show(Image.NO)
